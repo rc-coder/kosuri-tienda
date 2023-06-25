@@ -1,0 +1,28 @@
+{
+  "entradas": [
+    {
+      "id": 28,
+      "section": "Entradas",
+      "subSection": "",
+      "name": "Tequeños",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 29,
+      "section": "Entradas",
+      "subSection": "",
+      "name": "Rabas",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 30,
+      "section": "Entradas",
+      "subSection": "",
+      "name": "Langos Jumbo",
+      "description": "Rollo bien rico",
+      "price": 2000
+    }
+  ]
+}

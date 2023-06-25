@@ -1,0 +1,36 @@
+{
+  "platos": [
+    {
+      "id": 33,
+      "section": "Platos Calientes",
+      "subSection": "Platos",
+      "name": "Salmon Teriyaki",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 34,
+      "section": "Platos Calientes",
+      "subSection": "Woks",
+      "name": "Yakimeshi de Carne",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 35,
+      "section": "Platos Calientes",
+      "subSection": "Woks",
+      "name": "Yakisoba de Pollo",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 36,
+      "section": "Platos Calientes",
+      "subSection": "Kids",
+      "name": "Nuggets con fritas",
+      "description": "Rollo bien rico",
+      "price": 2000
+    }
+  ]
+}

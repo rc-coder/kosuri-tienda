@@ -1,25 +1,70 @@
 'use client';
 
 import styled from 'styled-components';
-import React from 'react';
-
-const NavbarStyled = styled.div`
-  padding: 10px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #f4f4f4;
-  width: 100%;
-  z-index: 999;
-  border-bottom: 3px solid #e5edef;
-`;
+import React, { useState } from 'react';
+import Image from 'next/image';
+import kosuriLogo from '../../../public/assets/kosuri-logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  CtaButton,
+  MenuContainer,
+  MenuLink,
+  NavbarLink,
+  NavbarLogo,
+  NavbarMenu,
+  SocialContainer,
+  NavbarStyled,
+} from './NavbarElements';
+import { menuItems } from '@/public/assets/data/menulist';
 
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+
   return (
-    <NavbarStyled>
-      <h1 style={{ color: 'red' }}>Navbar</h1>
-    </NavbarStyled>
+    <>
+      <NavbarStyled>
+        <NavbarLogo>
+          <NavbarLink href="/">
+            <Image
+              src={kosuriLogo}
+              width={200}
+              // height={50}
+              alt="kosuri logo"
+            ></Image>
+          </NavbarLink>
+        </NavbarLogo>
+
+        <NavbarMenu>
+          <CtaButton href={''}>
+            <h2>Hacé tu pedido</h2>
+          </CtaButton>
+          <div className="links">
+            <NavbarLink
+              href={''}
+              onMouseEnter={() => setShow(true)}
+              onClick={() => setShow(!show)}
+            >
+              Menú
+            </NavbarLink>
+            <NavbarLink href={'#Sucursales'}>Sucursales</NavbarLink>
+            <NavbarLink href={'#Promos'}>Promos</NavbarLink>
+            <SocialContainer>
+              <NavbarLink href={''}>
+                <FontAwesomeIcon icon={faInstagram} />
+              </NavbarLink>
+            </SocialContainer>
+          </div>
+        </NavbarMenu>
+      </NavbarStyled>
+      <MenuContainer show={show} onMouseLeave={() => setShow(false)}>
+        {menuItems.map((item) => (
+          <MenuLink href={item.url} key={item.id}>
+            {item.sectionName}
+          </MenuLink>
+        ))}
+      </MenuContainer>
+    </>
   );
 };
 

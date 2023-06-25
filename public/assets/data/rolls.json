@@ -1,0 +1,124 @@
+{
+  "rolls": [
+    {
+      "id": 1,
+      "section": "Rolls",
+      "subSection": "Clasicos",
+      "name": "New York Phila",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "section": "Rolls",
+      "subSection": "Clasicos",
+      "name": "Honey",
+      "description": "Rollo bien rico",
+      "price": 3000
+    },
+    {
+      "id": 3,
+      "section": "Rolls",
+      "subSection": "Clasicos",
+      "name": "Dinamita",
+      "description": "Rollo bien rico",
+      "price": 4000
+    },
+    {
+      "id": 4,
+      "section": "Rolls",
+      "subSection": "Clasicos",
+      "name": "New York Phila",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 5,
+      "section": "Rolls",
+      "subSection": "Especiales",
+      "name": "Buenos Aires",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 6,
+      "section": "Rolls",
+      "subSection": "Especiales",
+      "name": "Paraiso",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 7,
+      "section": "Rolls",
+      "subSection": "Rebozados",
+      "name": "Chicken crack",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 8,
+      "section": "Rolls",
+      "subSection": "Rebozados",
+      "name": "New York Phila crack",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 9,
+      "section": "Rolls",
+      "subSection": "Rebozados",
+      "name": "Ebi crack",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 10,
+      "section": "Rolls",
+      "subSection": "Niguiris",
+      "name": "Salmón",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 11,
+      "section": "Rolls",
+      "subSection": "Niguiris",
+      "name": "Ebi",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 12,
+      "section": "Rolls",
+      "subSection": "Temakis",
+      "name": "Salmón",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 13,
+      "section": "Rolls",
+      "subSection": "Temakis",
+      "name": "Ebi",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 14,
+      "section": "Rolls",
+      "subSection": "Geishas",
+      "name": "Salmón",
+      "description": "Rollo bien rico",
+      "price": 2000
+    },
+    {
+      "id": 15,
+      "section": "Rolls",
+      "subSection": "Geishas",
+      "name": "Salmón Ahumado",
+      "description": "Rollo bien rico",
+      "price": 2000
+    }
+  ]
+}
