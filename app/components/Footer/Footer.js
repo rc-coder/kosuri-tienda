@@ -25,8 +25,8 @@ export const Footer = () => {
       <FooterLogo>
         <Image
           src={`/assets/icon-kosuri-sushi-100x100.png`}
-          width={70}
-          height={70}
+          width={50}
+          height={50}
           alt="Kosuri Logo"
         ></Image>
       </FooterLogo>

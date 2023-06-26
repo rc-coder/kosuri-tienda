@@ -29,29 +29,34 @@ export const SectionsContainer = styled.section`
   align-items: center;
   width: 90%;
   height: 50px;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid darkgray;
   padding: 50px 0;
 
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     padding-bottom: 90px;
     height: 100%;
-  }
+  } */
+`;
 
-  & p {
-    color: gray;
-    font-weight: bold;
-    cursor: pointer;
-  }
+export const SectionsTags = styled.p`
+  color: gray;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: ${({ selected }) =>
+    selected ? '2px solid black' : '2px solid red'};
+  opacity: ${({ selected }) => (selected ? '1' : '0.5')};
+  transition: all 0.5s;
 `;
 
 export const ItemsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 50px;
-  padding: 0 50px;
+  padding: 0 50px 50px 50px;
 
   & .hidden {
     opacity: 0;
@@ -136,5 +141,29 @@ export const CardItem = styled.div`
 
   & .price {
     font-weight: bold;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  background-color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+`;
+
+export const BottomBanner = styled.div`
+  background-image: url('/assets/banner-background.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    min-width: 450px;
+    padding: 80px;
+    object-fit: cover;
   }
 `;

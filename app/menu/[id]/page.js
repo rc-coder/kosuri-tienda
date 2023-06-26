@@ -3,16 +3,20 @@
 import { rolls } from '@/public/assets/data/menuItems';
 import { entradas } from '@/public/assets/data/menuItems';
 import {
+  BottomBanner,
+  ButtonContainer,
   CardItem,
   Divider,
   ItemsContainer,
   MenuBanner,
   MenuContainer,
   SectionsContainer,
+  SectionsTags,
 } from './MenuElements';
 import Image from 'next/image';
 import { formatPrice } from '@/app/utils/priceFormatter';
 import { useEffect, useState } from 'react';
+import { CtaButton } from '@/app/components/Navbar/NavbarElements';
 
 export default function Menu({ params }) {
   //   Eliminar duplicados con Set
@@ -63,11 +67,20 @@ export default function Menu({ params }) {
         />
         <Divider>
           <SectionsContainer>
-            <p onClick={() => setSection('')}>Todos</p>
+            <SectionsTags
+              onClick={() => setSection('')}
+              selected={section === ''}
+            >
+              Todos
+            </SectionsTags>
             {subSections.map((subs) => (
-              <p key={subs} onClick={() => setSection(subs)}>
+              <SectionsTags
+                key={subs}
+                onClick={() => setSection(subs)}
+                selected={subs === section}
+              >
                 {subs}
-              </p>
+              </SectionsTags>
             ))}
           </SectionsContainer>
         </Divider>
@@ -109,6 +122,14 @@ export default function Menu({ params }) {
             ))}
         </ItemsContainer>
       </MenuContainer>
+      <ButtonContainer>
+        <CtaButton href={''}>
+          <h2>Hacé tu pedido</h2>
+        </CtaButton>
+      </ButtonContainer>
+      <BottomBanner>
+        <img src={'/assets/kosuri-sushi-y-cocina-oriental.png'}></img>
+      </BottomBanner>
     </>
   );
 }
