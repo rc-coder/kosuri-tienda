@@ -2,7 +2,7 @@
 
 import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const ScrollTopButton = styled.div`
@@ -41,7 +41,12 @@ export const ScrollButton = () => {
     });
   };
 
-  window.addEventListener('scroll', toggleVisible);
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisible);
+    return () => {
+      window.removeEventListener('scroll', toggleVisible);
+    };
+  }, []);
 
   return (
     <ScrollTopButton

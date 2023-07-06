@@ -17,6 +17,10 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Kosuri',
   description: 'Kosuri Web App',
+  // icons: {
+  //   icon: '/public/assets/icon-kosuri-sushi-100x100.png',
+  //   apple: '/public/assets/icon-kosuri-sushi-100x100.png',
+  // },
 };
 
 export default function RootLayout({ children }) {
