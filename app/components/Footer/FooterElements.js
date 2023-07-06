@@ -49,8 +49,11 @@ export const FooterLogo = styled.div`
     calc(100% - var(--b) - 2 * var(--_p));
 
   & img {
-    height: 40px;
-    width: 40px;
+    max-width: 100px;
+    @media screen and (max-width: 600px) {
+      max-width: 60px;
+      height: auto;
+    }
   }
 `;
 

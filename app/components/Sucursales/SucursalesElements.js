@@ -4,12 +4,18 @@ export const SucursalesSection = styled.section`
   background-color: darkred;
   height: auto;
   padding: 60px;
+  @media screen and (max-width: 700px) {
+    padding: 0;
+  }
 `;
 
 export const SucursalesCardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 50px;
+  @media screen and (max-width: 700px) {
+    padding: 60px;
+  }
 
   & .hidden {
     opacity: 0;
@@ -42,6 +48,11 @@ export const SucursalesMainText = styled.div`
   color: #f4f4f4;
   line-height: 2em;
   text-align: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 60px 20px 0px 20px;
+    font-size: 0.9em;
+  }
 
   & h2 {
     font-weight: bold;

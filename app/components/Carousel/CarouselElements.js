@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import css from 'styled-jsx/css';
 
@@ -9,7 +10,7 @@ export const CarouselStyled = styled.div`
   position: relative;
 `;
 
-export const ImageStyled = styled.img`
+export const ImageStyled = styled(Image)`
   max-width: 100vw;
   width: 100%;
   height: auto;

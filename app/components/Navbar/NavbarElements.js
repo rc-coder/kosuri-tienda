@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 export const NavbarStyled = styled.div`
+  /* position: fixed; */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -10,16 +11,30 @@ export const NavbarStyled = styled.div`
   background: black;
   width: 100%;
   z-index: 999;
-  /* border-bottom: 3px solid #e5edef; */
+  border-bottom: 3px solid red;
 `;
 
-export const NavbarLogo = styled.div`
+export const NavbarLogoContainer = styled.div`
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f4f4f4;
   width: 100%;
+  z-index: 20;
+  transition: all 0.5s;
+
+  & .menuIcon {
+    display: none;
+    padding-right: 10px;
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    justify-content: space-between;
+  }
 `;
 
 export const NavbarMenu = styled.div`
@@ -29,9 +44,22 @@ export const NavbarMenu = styled.div`
   padding: 10px;
   align-items: center;
   justify-content: space-evenly;
-  @media screen and (max-width: 600px) {
+  z-index: 100;
+
+  @media screen and (max-width: 700px) {
+    position: absolute;
+    right: 0;
     flex-direction: column;
-    padding: 30px 10px;
+    width: 80%;
+    height: 80vh;
+    border-bottom-left-radius: 20px;
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    transition-property: transform;
+    transition-duration: 0.5s;
+    overflow-x: hidden;
+    & .menu {
+      display: none;
+    }
   }
 
   & .links {
@@ -39,9 +67,10 @@ export const NavbarMenu = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media screen and (max-width: 600px) {
-      margin-top: 20px;
-      width: 100%;
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -10px;
     }
   }
 `;
@@ -50,11 +79,26 @@ export const NavbarLink = styled(Link)`
   color: #f4f4f4;
   background-color: transparent;
   padding: 0 10px;
+
+  @media screen and (max-width: 700px) {
+    font-size: 5vw;
+    padding: 10px 10px;
+  }
 `;
 
 export const SocialContainer = styled.div`
   border-left: 1px solid #f4f4f4;
   padding-left: 20px;
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: none;
+    margin-top: 20px;
+    border-top: 1px solid #f4f4f4;
+    padding-left: 0;
+  }
 `;
 
 export const CtaButton = styled(Link)`
@@ -76,6 +120,7 @@ export const CtaButton = styled(Link)`
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
   font-size: 16px;
+  text-align: center;
 
   border: 0;
 
@@ -96,6 +141,11 @@ export const CtaButton = styled(Link)`
     background: var(--color);
     color: #fff;
   }
+
+  @media screen and (max-width: 700px) {
+    font-size: 18.5px;
+    padding: calc(0.5em + var(--s)) calc(1em + var(--s));
+  }
 `;
 
 export const MenuContainer = styled.div`
@@ -110,9 +160,7 @@ export const MenuContainer = styled.div`
   opacity: ${({ show }) => (show ? '1' : '0')};
   position: absolute;
   transition: 0.3s linear;
-  z-index: 9999;
-  /* transition-property: opacity;
-  transition-duration: 0.5s; */
+  z-index: 50;
 `;
 
 export const MenuLink = styled(Link)`
@@ -129,7 +177,37 @@ export const MenuLink = styled(Link)`
 // export const Logo = styled.img`
 //   max-width: 200px;
 //   height: auto;
-//   @media screen and (max-width: 600px) {
+//   @media screen and (max-width: 700px) {
 //     max-width: 150px;
 //   }
 // `;
+
+//Mobile Menu
+
+export const Dropdown = styled.div`
+  display: none;
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+`;
+
+export const DropdownMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  padding: 10px;
+  color: gray;
+  display: ${({ open }) => (open ? 'block' : 'none')};
+  font-size: 4vw;
+`;
+
+export const DropdownTrigger = styled.div`
+  color: #f4f4f4;
+  background-color: transparent;
+  padding: 10px 10px;
+  font-size: 5vw;
+`;
+
+export const DropdownItem = styled.a`
+  list-style: none;
+`;

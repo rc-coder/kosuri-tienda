@@ -4,12 +4,18 @@ export const PromosSection = styled.section`
   background-color: #f4f4f4;
   height: auto;
   padding: 60px;
+  @media screen and (max-width: 700px) {
+    padding: 0px;
+  }
 `;
 
 export const PromosCardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 50px;
+  @media screen and (max-width: 700px) {
+    padding: 60px;
+  }
 
   & .hidden {
     opacity: 0;
@@ -47,6 +53,9 @@ export const PromosMainText = styled.div`
     font-weight: bold;
     font-size: 2.2em;
     margin-bottom: 10px;
+    @media screen and (max-width: 700px) {
+      margin-bottom: 30px;
+    }
   }
   & h3 {
     color: grey;
@@ -54,6 +63,10 @@ export const PromosMainText = styled.div`
   & p {
     font-size: 1em;
     color: darkgray;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 50px 20px 0px 20px;
   }
 `;
 

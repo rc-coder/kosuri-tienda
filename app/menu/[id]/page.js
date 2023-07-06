@@ -11,6 +11,7 @@ import {
   MenuBanner,
   MenuContainer,
   SectionsContainer,
+  SectionsDropdown,
   SectionsTags,
 } from './MenuElements';
 import Image from 'next/image';
@@ -40,6 +41,7 @@ export default function Menu({ params }) {
 
   const [section, setSection] = useState('');
   let displayItems = rolls;
+  console.log(section);
 
   //   const clasicos = rolls.filter((roll) => roll.subSection === 'Clasicos');
 
@@ -64,6 +66,8 @@ export default function Menu({ params }) {
         <MenuBanner
           src={`/assets/${params.id}.jpg`}
           alt={`Imagen ${params.id}`}
+          width={500}
+          height={500}
         />
         <Divider>
           <SectionsContainer>
@@ -82,6 +86,17 @@ export default function Menu({ params }) {
                 {subs}
               </SectionsTags>
             ))}
+            <SectionsDropdown
+              name="sectionsDropdown"
+              onChange={(e) => setSection(e.target.value)}
+            >
+              <option value={''}>Todos</option>
+              {subSections.map((subs) => (
+                <option key={subs} value={subs}>
+                  {subs}
+                </option>
+              ))}
+            </SectionsDropdown>
           </SectionsContainer>
         </Divider>
 

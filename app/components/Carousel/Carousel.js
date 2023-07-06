@@ -52,8 +52,8 @@ export const Carousel = () => {
       <CarouselStyled>
         <ImageStyled
           src={`/assets/${selectedImage}`}
-          // width={500}
-          // height={500}
+          width={500}
+          height={500}
           alt="kosuri logo"
           className={loaded ? 'loaded' : ''}
           onLoad={() => setLoaded(true)}

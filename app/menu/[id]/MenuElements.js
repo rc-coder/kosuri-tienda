@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import styled from 'styled-components';
 
 export const MenuContainer = styled.div`
   background-color: #f4f4f4;
 `;
 
-export const MenuBanner = styled.img`
+export const MenuBanner = styled(Image)`
   max-width: 100vw;
   max-height: 50vw;
   width: 100%;
@@ -50,6 +51,30 @@ export const SectionsTags = styled.p`
     selected ? '2px solid black' : '2px solid red'};
   opacity: ${({ selected }) => (selected ? '1' : '0.5')};
   transition: all 0.5s;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const SectionsDropdown = styled.select`
+  display: none;
+  background-color: #f4f4f4;
+  color: black;
+  border: none;
+  font-size: 1.5em;
+  border-bottom: 2px solid red;
+  padding: 5px;
+  text-align: center;
+
+  @media screen and (max-width: 700px) {
+    display: inline;
+  }
+
+  & option {
+    font-size: 0.8em;
+    background-color: #f4f4f4;
+  }
 `;
 
 export const ItemsContainer = styled.section`
