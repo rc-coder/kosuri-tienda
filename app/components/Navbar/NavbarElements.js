@@ -160,7 +160,7 @@ export const MenuContainer = styled.div`
   opacity: ${({ show }) => (show ? '1' : '0')};
   position: absolute;
   transition: 0.3s linear;
-  z-index: 50;
+  z-index: 60;
 `;
 
 export const MenuLink = styled(Link)`

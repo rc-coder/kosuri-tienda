@@ -54,7 +54,7 @@ const Navbar = () => {
         </NavbarLogoContainer>
       </NavbarStyled>
       <NavbarMenu open={openSide}>
-        <CtaButton href={''}>
+        <CtaButton href={'https://app.menuapp.com.ar/sucursales/kosurisushi'}>
           <h2>Hacé tu pedido</h2>
         </CtaButton>
         <div className="links">
@@ -95,7 +95,10 @@ const Navbar = () => {
             Eventos
           </NavbarLink>
           <SocialContainer>
-            <NavbarLink href={''}>
+            <NavbarLink
+              href={'https://www.instagram.com/kosuri_tienda/'}
+              target="blanc"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </NavbarLink>
           </SocialContainer>

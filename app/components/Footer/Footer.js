@@ -18,7 +18,10 @@ export const Footer = () => {
       <FooterDesigner>
         <h5>
           Diseño por
-          <Link href={''}>
+          <Link
+            href={'https://www.linkedin.com/in/ricardo-campelo/'}
+            target="blank"
+          >
             <span> Ricardo Campelo</span>
           </Link>
         </h5>
@@ -28,7 +31,7 @@ export const Footer = () => {
       </FooterLogo>
       <FooterSocial>
         <p>Seguinos</p>
-        <Link href={'https://www.instagram.com/kosuri_tienda/'} target="_blank">
+        <Link href={'https://www.instagram.com/kosuri_tienda/'} target="blank">
           <FontAwesomeIcon
             icon={faInstagram}
             className="icon"

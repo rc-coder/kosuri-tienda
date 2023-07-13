@@ -3,6 +3,8 @@
 import { rolls } from '@/public/assets/data/menuItems';
 import { entradas } from '@/public/assets/data/menuItems';
 import {
+  BannerContainer,
+  BannerText,
   BottomBanner,
   ButtonContainer,
   CardItem,
@@ -18,6 +20,7 @@ import Image from 'next/image';
 import { formatPrice } from '@/app/utils/priceFormatter';
 import { useEffect, useState } from 'react';
 import { CtaButton } from '@/app/components/Navbar/NavbarElements';
+import Link from 'next/link';
 
 export default function Menu({ params }) {
   //   Eliminar duplicados con Set
@@ -63,12 +66,18 @@ export default function Menu({ params }) {
   return (
     <>
       <MenuContainer>
-        <MenuBanner
-          src={`/assets/${params.id}.jpg`}
-          alt={`Imagen ${params.id}`}
-          width={500}
-          height={500}
-        />
+        <BannerContainer>
+          <BannerText>
+            <h2>{params.id}</h2>
+          </BannerText>
+          <MenuBanner
+            src={`/assets/${params.id}.jpg`}
+            alt={`Imagen ${params.id}`}
+            width={500}
+            height={500}
+          />
+        </BannerContainer>
+
         <Divider>
           <SectionsContainer>
             <SectionsTags
@@ -118,7 +127,11 @@ export default function Menu({ params }) {
                   <h2>{item.name}</h2>
                   <h4>{item.subSection}</h4>
                   <p>{item.description}</p>
-                  <div className="priceContainer">
+
+                  <Link
+                    href={'https://app.menuapp.com.ar/sucursales/kosurisushi'}
+                    className="priceContainer"
+                  >
                     <div className="priceBox">
                       <span className="pieces">4p</span>
                       <span className="price">
@@ -131,14 +144,14 @@ export default function Menu({ params }) {
                         {formatPrice(item.pricePorc)}
                       </span>
                     </div>
-                  </div>
+                  </Link>
                 </CardItem>
               </div>
             ))}
         </ItemsContainer>
       </MenuContainer>
       <ButtonContainer>
-        <CtaButton href={''}>
+        <CtaButton href={'https://app.menuapp.com.ar/sucursales/kosurisushi'}>
           <h2>Hacé tu pedido</h2>
         </CtaButton>
       </ButtonContainer>

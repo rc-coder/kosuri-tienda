@@ -7,12 +7,38 @@ export const MenuContainer = styled.div`
   background-color: #f4f4f4;
 `;
 
+export const BannerContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+`;
+
 export const MenuBanner = styled(Image)`
   max-width: 100vw;
   max-height: 50vw;
   width: 100%;
   height: auto;
   object-fit: cover;
+`;
+
+export const BannerText = styled.div`
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  & h2 {
+    text-transform: uppercase;
+    font-size: 11vw;
+  }
 `;
 
 export const Divider = styled.div`

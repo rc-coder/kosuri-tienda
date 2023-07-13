@@ -21,6 +21,28 @@ export const ImageStyled = styled(Image)`
   }
 `;
 
+export const PromoText = styled.div`
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  & h2 {
+    opacity: 0;
+    transition: 1s;
+    font-size: 11vw;
+    &.loaded {
+      opacity: 1;
+    }
+  }
+`;
+
 export const DotContainer = styled.div`
   display: flex;
   gap: 10px;
@@ -29,6 +51,7 @@ export const DotContainer = styled.div`
   position: absolute;
   bottom: 5%;
   left: 50%;
+  z-index: 50;
   transform: translate(-50%, 0);
 `;
 
